@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Posti disponibili</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      margin-top: 100px;
+    }
+    iframe {
+      border: none;
+      width: 100%;
+      max-width: 400px;
+      height: 120px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Posti disponibili aggiornati in tempo reale</h2>
+  <iframe src="https://script.google.com/macros/s/AKfycbw_eJrrEHbwh24ZKBZjhg9pNzLZhavbOOuBolBAr0OrXkdzVCET_kZFD3WlNyuFby82/exec"></iframe>
+</body>
+</html>
