@@ -1,24 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="it">
 <head>
   <meta charset="UTF-8">
-  <title>Posti disponibili</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Posti Disponibili</title>
   <style>
-    body {
-      font-family: sans-serif;
-      text-align: center;
-      margin-top: 100px;
-    }
-    iframe {
-      border: none;
-      width: 100%;
-      max-width: 400px;
-      height: 120px;
-    }
+    body { text-align: center; font-family: Arial, sans-serif; margin-top: 50px; }
+    h1 { color: green; }
+    .posto { font-size: 24px; font-weight: bold; margin: 10px 0; }
   </style>
 </head>
 <body>
-  <h2>Posti disponibili aggiornati in tempo reale</h2>
-  <iframe src="https://script.google.com/macros/s/AKfycbw_eJrrEHbwh24ZKBZjhg9pNzLZhavbOOuBolBAr0OrXkdzVCET_kZFD3WlNyuFby82/exec"></iframe>
+  <h1>Contatore dei Posti Disponibili</h1>
+  
+  <div id="monza" class="posto"></div>
+  <div id="milano" class="posto"></div>
+
+  <script>
+    // Modifica il link con quello della tua Web App
+    fetch('https://script.google.com/macros/s/AKfycbxdsVPMxMHlmi_EzmcZQeEAEuKdJk_cg4ezlDR4ca8vA9aBtH9XhE2BuNJJTDdAb82z/exec')
+      .then(response => response.json())  // Se la Web App restituisce dati in formato JSON
+      .then(data => {
+        // Mostra i dati nelle div
+        document.getElementById('monza').innerHTML = `${data.monza} posti disponibili a Monza`;
+        document.getElementById('milano').innerHTML = `${data.milano} posti disponibili a Milano`;
+      })
+      .catch(error => console.error('Errore nel recupero dei dati:', error));
+  </script>
 </body>
 </html>
