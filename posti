@@ -18,7 +18,7 @@
 
   <script>
     // Modifica il link con quello della tua Web App
-    fetch('https://script.google.com/macros/s/AKfycbxdsVPMxMHlmi_EzmcZQeEAEuKdJk_cg4ezlDR4ca8vA9aBtH9XhE2BuNJJTDdAb82z/exec')
+    fetch('https://script.google.com/macros/s/AKfycbxGDwCcZpZLOV6fLhVPwcqohLF_bdaKat80qnMkGBt344-P6YIELJuMi4XOoWFFzYqE/exec')
       .then(response => response.json())  // Se la Web App restituisce dati in formato JSON
       .then(data => {
         // Mostra i dati nelle div
